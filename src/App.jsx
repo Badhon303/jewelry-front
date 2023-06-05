@@ -217,8 +217,8 @@ function App() {
                       <div className="notif-image">
                         <span className="notification-badge">
                           <img
-                            // src={`${url}/src/assets/images/avatars/profile-image.png`}
-                            src="src/assets/images/avatars/profile-image.png"
+                            // src={`${url}//assets/images/avatars/profile-image.png`}
+                            src="/assets/images/avatars/profile-image.png"
                             alt=""
                           />
                         </span>
@@ -234,8 +234,8 @@ function App() {
                       <div className="notif-image">
                         <span className="notification-badge">
                           <img
-                            // src={`${url}/src/assets/images/avatars/profile-image-3.jpg`}
-                            src="/src/assets/images/avatars/profile-image-3.jpg"
+                            // src={`${url}//assets/images/avatars/profile-image-3.jpg`}
+                            src="/assets/images/avatars/profile-image-3.jpg"
                             alt=""
                           />
                         </span>
@@ -258,7 +258,7 @@ function App() {
                   aria-expanded="false"
                 >
                   <img
-                    src="/src/assets/images/avatars/profile-image-1.png"
+                    src="/assets/images/avatars/profile-image-1.png"
                     alt=""
                   />
                 </a>
@@ -727,7 +727,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src="src/assets/images/avatars/profile-image-1.png"
+                              src="/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Anna Doe
@@ -742,7 +742,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src="src/assets/images/avatars/profile-image-2.png"
+                              src="/assets/images/avatars/profile-image-2.png"
                               alt=""
                             />
                             John Doe
@@ -757,7 +757,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src="src/assets/images/avatars/profile-image-1.png"
+                              src="/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Anna Doe
@@ -772,7 +772,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src="src/assets/images/avatars/profile-image.png"
+                              src="/assets/images/avatars/profile-image.png"
                               alt=""
                             />
                             John Doe
@@ -787,7 +787,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src="src/assets/images/avatars/profile-image-1.png"
+                              src="/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Nina Doe
@@ -902,7 +902,7 @@ function App() {
             <div className="col-md-12 col-lg-4">
               <div className="card">
                 <img
-                  src="url/src/assets/images/card-bg.jpg"
+                  src="url//assets/images/card-bg.jpg"
                   className="card-img-top"
                   alt="..."
                 />
