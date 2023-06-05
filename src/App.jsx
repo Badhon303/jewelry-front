@@ -689,7 +689,7 @@ function App() {
                 </div>
               </div>
             </div> */}
-            <div className="col-sm-12 col-md-4 m-b-md">
+            <div className="col-sm-6 col-xl-4">
               <div className="card">
                 <div className="card-body">
                   <div
