@@ -15,7 +15,7 @@ function App() {
   ]
 
   // const url = "http://localhost:5173"
-  const url = "https://jewelry-front.vercel.app"
+  // const url = "https://jewelry-front.vercel.app"
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -217,7 +217,8 @@ function App() {
                       <div className="notif-image">
                         <span className="notification-badge">
                           <img
-                            src={`${url}/src/assets/images/avatars/profile-image.png`}
+                            // src={`${url}/src/assets/images/avatars/profile-image.png`}
+                            src="src/assets/images/avatars/profile-image.png"
                             alt=""
                           />
                         </span>
@@ -233,7 +234,8 @@ function App() {
                       <div className="notif-image">
                         <span className="notification-badge">
                           <img
-                            src={`${url}/src/assets/images/avatars/profile-image-3.jpg`}
+                            // src={`${url}/src/assets/images/avatars/profile-image-3.jpg`}
+                            src="/src/assets/images/avatars/profile-image-3.jpg"
                             alt=""
                           />
                         </span>
@@ -256,7 +258,7 @@ function App() {
                   aria-expanded="false"
                 >
                   <img
-                    src={`${url}/src/assets/images/avatars/profile-image-1.png`}
+                    src="/src/assets/images/avatars/profile-image-1.png"
                     alt=""
                   />
                 </a>
@@ -725,7 +727,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src={`${url}/src/assets/images/avatars/profile-image-1.png`}
+                              src="src/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Anna Doe
@@ -740,7 +742,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src={`${url}/src/assets/images/avatars/profile-image-2.png`}
+                              src="src/assets/images/avatars/profile-image-2.png"
                               alt=""
                             />
                             John Doe
@@ -755,7 +757,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src={`${url}/src/assets/images/avatars/profile-image-1.png`}
+                              src="src/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Anna Doe
@@ -770,7 +772,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src={`${url}/src/assets/images/avatars/profile-image.png`}
+                              src="src/assets/images/avatars/profile-image.png"
                               alt=""
                             />
                             John Doe
@@ -785,7 +787,7 @@ function App() {
                         <tr>
                           <th scope="row">
                             <img
-                              src={`${url}/src/assets/images/avatars/profile-image-1.png`}
+                              src="src/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Nina Doe
