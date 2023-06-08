@@ -110,9 +110,9 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className="logo">
+          {/* <div className="logo">
             <a className="navbar-brand" href="index.html"></a>
-          </div>
+          </div> */}
           <div className="" id="headerNav">
             <ul className="navbar-nav">
               <li className="nav-item dropdown">
@@ -539,14 +539,14 @@ function App() {
             <div className="col-md-6 col-xl-3">
               <div className="card stat-widget">
                 <div className="card-body">
-                  <h5 className="card-title">New Customers</h5>
-                  <h2>132</h2>
-                  <p>From last week</p>
+                  <h5 className="card-title">Storage Room</h5>
+                  <h2 id="StorageRoom">0</h2>
+                  <p>Current data of Storage Room </p>
                   <div className="progress">
                     <div
-                      className="progress-bar bg-info progress-bar-striped"
+                      className="progress-bar bar1 bg-info progress-bar-striped"
                       role="progressbar"
-                      style={{ width: "25%" }}
+                      style={{ width: "0%" }}
                       aria-valuenow="25"
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -558,14 +558,14 @@ function App() {
             <div className="col-md-6 col-xl-3">
               <div className="card stat-widget">
                 <div className="card-body">
-                  <h5 className="card-title">Orders</h5>
-                  <h2>287</h2>
-                  <p>Orders in waitlist</p>
+                  <h5 className="card-title">Repair/Service Area</h5>
+                  <h2 id="Repair">0</h2>
+                  <p>Current data of Repair/Service Area</p>
                   <div className="progress">
                     <div
-                      className="progress-bar bg-success progress-bar-striped"
+                      className="progress-bar bar2 bg-success progress-bar-striped"
                       role="progressbar"
-                      style={{ width: "50%" }}
+                      style={{ width: "0%" }}
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -577,14 +577,14 @@ function App() {
             <div className="col-md-6 col-xl-3">
               <div className="card stat-widget">
                 <div className="card-body">
-                  <h5 className="card-title">Monthly Profit</h5>
-                  <h2>7.4K</h2>
-                  <p>For last 30 days</p>
+                  <h5 className="card-title">Display Cases</h5>
+                  <h2 id="Display">0</h2>
+                  <p>Current data of Display Cases</p>
                   <div className="progress">
                     <div
-                      className="progress-bar bg-danger progress-bar-striped"
+                      className="progress-bar bar3 bg-danger progress-bar-striped"
                       role="progressbar"
-                      style={{ width: "60%" }}
+                      style={{ width: "0%" }}
                       aria-valuenow="60"
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -596,14 +596,14 @@ function App() {
             <div className="col-md-6 col-xl-3">
               <div className="card stat-widget">
                 <div className="card-body">
-                  <h5 className="card-title">Orders</h5>
-                  <h2>87</h2>
-                  <p>Orders in waitlist</p>
+                  <h5 className="card-title">Exits</h5>
+                  <h2 id="Exits">0</h2>
+                  <p>Current data of Exits</p>
                   <div className="progress">
                     <div
-                      className="progress-bar bg-primary progress-bar-striped"
+                      className="progress-bar bar4 bg-primary progress-bar-striped"
                       role="progressbar"
-                      style={{ width: "50%" }}
+                      style={{ width: "0%" }}
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -618,7 +618,7 @@ function App() {
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title">Jewelry Items</h5>
-                  <div id="apex1"></div>
+                  <div id="apex3"></div>
                 </div>
               </div>
             </div>
@@ -708,7 +708,290 @@ function App() {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-12 col-lg-8">
+            <div className="col">
+              <div className="card">
+                <div className="card-body">
+                  <div className="row">
+                    <div className="col-8">
+                      <h2>Top Jewelry Items</h2>
+                    </div>
+                  </div>
+                  <div className="row p-4">
+                    <div className="col-sm-12 col-md-6">
+                      <div className="row g-3 align-items-center">
+                        <div className="col-auto">
+                          <label
+                            htmlFor="inputSearch"
+                            className="col-form-label"
+                          >
+                            Search
+                          </label>
+                        </div>
+                        <div className="col-auto">
+                          <input
+                            type="text"
+                            id="inputSearch"
+                            className="form-control"
+                            aria-describedby="searchHelpInline"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="table-responsive">
+                      <table className="table invoice-table">
+                        <thead>
+                          <tr>
+                            <th scope="col" style={{ textAlign: "center" }}>
+                              SKU
+                            </th>
+                            <th scope="col" style={{ textAlign: "center" }}>
+                              Item
+                            </th>
+                            <th scope="col" style={{ textAlign: "center" }}>
+                              Out of tray/Back to tray
+                            </th>
+                            <th scope="col" style={{ textAlign: "center" }}>
+                              Status
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style={{ textAlign: "center" }}>
+                              62d1b06dbecaa09a50696791
+                            </td>
+                            <td style={{ textAlign: "center" }}>Earrings</td>
+                            <td style={{ textAlign: "center" }}>342</td>
+                            <td style={{ textAlign: "center" }}>
+                              <span className="badge bg-success">Sold</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style={{ textAlign: "center" }}>
+                              62de7346ac54db78589e9c50
+                            </td>
+                            <td style={{ textAlign: "center" }}>Necklace</td>
+                            <td style={{ textAlign: "center" }}>215</td>
+                            <td style={{ textAlign: "center" }}>
+                              <span className="badge bg-success">Sold</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style={{ textAlign: "center" }}>
+                              62f8a41c023a0884ccf0fcac62
+                            </td>
+                            <td style={{ textAlign: "center" }}>Bracelet</td>
+                            <td style={{ textAlign: "center" }}>212</td>
+                            <td style={{ textAlign: "center" }}>
+                              <span className="badge bg-danger">Not Sold</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style={{ textAlign: "center" }}>
+                              640eef5fff9bf9db3793cb4e51
+                            </td>
+                            <td style={{ textAlign: "center" }}>Ring</td>
+                            <td style={{ textAlign: "center" }}>211</td>
+                            <td style={{ textAlign: "center" }}>
+                              <span className="badge bg-success">Sold</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <nav
+                    aria-label="Page navigation example"
+                    style={{ marginTop: "20px" }}
+                  >
+                    <ul className="pagination justify-content-end">
+                      <li className="page-item">
+                        <a className="page-link" href="/users">
+                          Previous
+                        </a>
+                      </li>
+                      <li className="page-item">
+                        <a className="page-link" href="/users">
+                          1
+                        </a>
+                      </li>
+                      <li className="page-item">
+                        <a className="page-link" href="/users">
+                          2
+                        </a>
+                      </li>
+                      <li className="page-item">
+                        <a className="page-link" href="/users">
+                          3
+                        </a>
+                      </li>
+                      <li className="page-item">
+                        <a className="page-link" href="/users">
+                          Next
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div
+                    className="modal fade"
+                    id="exampleModalCenter1"
+                    tabIndex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                    style={{ display: "none" }}
+                  >
+                    <div className="modal-dialog modal-dialog-centered modal-lg">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5
+                            className="modal-title"
+                            id="exampleModalCenterTitle"
+                          >
+                            View
+                          </h5>
+                          <button
+                            type="button"
+                            className="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div className="modal-footer">
+                          <button
+                            type="button"
+                            className="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="modal fade"
+                    id="exampleModalCenter2"
+                    tabIndex="-1"
+                    aria-labelledby="exampleModalLabe2"
+                    aria-hidden="true"
+                    style={{ display: "none" }}
+                  >
+                    <div className="modal-dialog modal-dialog-centered modal-lg">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5
+                            className="modal-title"
+                            id="exampleModalCenterTitle"
+                          >
+                            Delete
+                          </h5>
+                          <button
+                            type="button"
+                            className="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div className="modal-footer">
+                          <button
+                            type="button"
+                            className="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* <div
+                    className="modal fade"
+                    id="exampleModalCenter3"
+                    tabIndex="-1"
+                    aria-labelledby="exampleModalLabe2"
+                    aria-hidden="true"
+                    style={{ display: "none" }}
+                  >
+                    <div className="modal-dialog modal-dialog-centered modal-lg">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5
+                            className="modal-title"
+                            id="exampleModalCenterTitle"
+                          >
+                            Create new upazilla
+                          </h5>
+                          <button
+                            type="button"
+                            className="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div className="row">
+                          <div className="col">
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="row g-3">
+                                  <div className="col-sm-5">
+                                    <input
+                                      type="email"
+                                      className="form-control"
+                                      placeholder="Email"
+                                      aria-label="Email"
+                                      value=""
+                                    />
+                                  </div>
+                                  <div className="col-sm">
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder="Name"
+                                      aria-label="Name"
+                                      value=""
+                                    />
+                                  </div>
+                                  <div className="col-sm">
+                                    <input
+                                      type="password"
+                                      className="form-control"
+                                      placeholder="Password"
+                                      aria-label="Password"
+                                      value=""
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="modal-footer">
+                          <button
+                            type="button"
+                            className="btn btn-primary"
+                            data-bs-dismiss="modal"
+                          >
+                            Create new upazilla
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            {/* <div className="col-md-12 col-lg-8">
               <div className="card table-widget">
                 <div className="card-body">
                   <h5 className="card-title">Recent Orders</h5>
@@ -725,77 +1008,77 @@ function App() {
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">
+                          <td style={{ textAlign: "center" }}>
                             <img
                               src="/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Anna Doe
-                          </th>
-                          <td>Modern</td>
-                          <td>#53327</td>
-                          <td>$20</td>
-                          <td>
+                          </td>
+                          <td style={{ textAlign: "center" }}>Modern</td>
+                          <td style={{ textAlign: "center" }}>#53327</td>
+                          <td style={{ textAlign: "center" }}>$20</td>
+                          <td style={{ textAlign: "center" }}>
                             <span className="badge bg-info">Shipped</span>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
+                          <td style={{ textAlign: "center" }}>
                             <img
                               src="/assets/images/avatars/profile-image-2.png"
                               alt=""
                             />
                             John Doe
-                          </th>
-                          <td>Alpha</td>
-                          <td>#13328</td>
-                          <td>$25</td>
-                          <td>
+                          </td>
+                          <td style={{ textAlign: "center" }}>Alpha</td>
+                          <td style={{ textAlign: "center" }}>#13328</td>
+                          <td style={{ textAlign: "center" }}>$25</td>
+                          <td style={{ textAlign: "center" }}>
                             <span className="badge bg-success">Paid</span>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
+                          <td style={{ textAlign: "center" }}>
                             <img
                               src="/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Anna Doe
-                          </th>
-                          <td>Lime</td>
-                          <td>#35313</td>
-                          <td>$20</td>
-                          <td>
+                          </td>
+                          <td style={{ textAlign: "center" }}>Lime</td>
+                          <td style={{ textAlign: "center" }}>#35313</td>
+                          <td style={{ textAlign: "center" }}>$20</td>
+                          <td style={{ textAlign: "center" }}>
                             <span className="badge bg-danger">Pending</span>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
+                          <td style={{ textAlign: "center" }}>
                             <img
                               src="/assets/images/avatars/profile-image.png"
                               alt=""
                             />
                             John Doe
-                          </th>
-                          <td>Circl Admin</td>
-                          <td>#73423</td>
-                          <td>$23</td>
-                          <td>
+                          </td>
+                          <td style={{ textAlign: "center" }}>Circl Admin</td>
+                          <td style={{ textAlign: "center" }}>#73423</td>
+                          <td style={{ textAlign: "center" }}>$23</td>
+                          <td style={{ textAlign: "center" }}>
                             <span className="badge bg-primary">Shipped</span>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
+                          <td style={{ textAlign: "center" }}>
                             <img
                               src="/assets/images/avatars/profile-image-1.png"
                               alt=""
                             />
                             Nina Doe
-                          </th>
-                          <td>Space</td>
-                          <td>#54773</td>
-                          <td>$20</td>
-                          <td>
+                          </td>
+                          <td style={{ textAlign: "center" }}>Space</td>
+                          <td style={{ textAlign: "center" }}>#54773</td>
+                          <td style={{ textAlign: "center" }}>$20</td>
+                          <td style={{ textAlign: "center" }}>
                             <span className="badge bg-success">Paid</span>
                           </td>
                         </tr>
@@ -804,12 +1087,20 @@ function App() {
                   </div>
                 </div>
               </div>
+            </div> */}
+            <div className="col-sm-6 col-xl-8">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Record</h5>
+                  <div id="apex1"></div>
+                </div>
+              </div>
             </div>
 
             <div className="col-md-12 col-lg-4">
               <div className="card stat-widget">
                 <div className="card-body">
-                  <h5 className="card-title">Orders</h5>
+                  <h5 className="card-title">Average</h5>
                   <div id="apex2"></div>
                 </div>
               </div>

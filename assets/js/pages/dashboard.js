@@ -1,56 +1,68 @@
 $(document).ready(function () {
-  // var options1 = {
-  //     chart: {
-  //         height: 350,
-  //         type: 'area',
-  //         toolbar: {
-  //             show: false,
-  //         }
-  //     },
-  //     dataLabels: {
-  //         enabled: false
-  //     },
-  //     stroke: {
-  //         curve: 'smooth'
-  //     },
-  //     colors: ['#b3baff','#90e0db'],
-  //     series: [{
-  //         name: 'series1',
-  //         data: [70, 79, 42, 51, 28, 40, 37]
-  //     }, {
-  //         name: 'series2',
-  //         data: [41, 52, 14, 32, 45, 32, 21]
-  //     }],
+  const progressBar1 = document.querySelector(".bar1")
+  const progressBar2 = document.querySelector(".bar2")
+  const progressBar3 = document.querySelector(".bar3")
+  const progressBar4 = document.querySelector(".bar4")
+  var options1 = {
+    chart: {
+      height: 350,
+      type: "area",
+      toolbar: {
+        show: false,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      curve: "smooth",
+    },
+    colors: ["#b3baff", "#90e0db"],
+    series: [
+      {
+        name: "series1",
+        data: [70, 79, 42, 51, 28, 40, 37],
+      },
+      {
+        name: "series2",
+        data: [41, 52, 14, 32, 45, 32, 21],
+      },
+    ],
 
-  //     xaxis: {
-  //         type: 'datetime',
-  //         categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],
-  //         labels: {
-  //             style: {
-  //                 colors: 'rgba(94, 96, 110, .5)'
-  //             }
-  //         }
-  //     },
-  //     tooltip: {
-  //         x: {
-  //             format: 'dd/MM/yy HH:mm'
-  //         },
-  //     },
-  //     grid: {
-  //         borderColor: 'rgba(94, 96, 110, .5)',
-  //         strokeDashArray: 4
-  //     }
-  // }
+    xaxis: {
+      type: "datetime",
+      categories: [
+        "2023-06-19T00:00:00",
+        "2023-06-19T01:30:00",
+        "2023-06-19T02:30:00",
+        "2023-06-19T03:30:00",
+        "2023-06-19T04:30:00",
+        "2023-06-19T05:30:00",
+        "2023-06-19T06:30:00",
+      ],
+      labels: {
+        style: {
+          colors: "rgba(94, 96, 110, .5)",
+        },
+      },
+    },
+    tooltip: {
+      x: {
+        format: "dd/MM/yy HH:mm",
+      },
+    },
+    grid: {
+      borderColor: "rgba(94, 96, 110, .5)",
+      strokeDashArray: 4,
+    },
+  }
 
-  // var chart1 = new ApexCharts(
-  //     document.querySelector("#apex1"),
-  //     options1
-  // );
+  var chart1 = new ApexCharts(document.querySelector("#apex1"), options1)
 
-  // chart1.render();
+  chart1.render()
 
   // Original array
-  let numbers = [200, 75, 20, 50, 240, 20, 45]
+  let numbers = [200, 75, 20, 50, 240, 20, 45, 0]
 
   function changeValues() {
     const interval = 2000 // Interval in milliseconds
@@ -74,7 +86,7 @@ $(document).ready(function () {
       // Ensure the updated value is not negative and not greater than 300
       numbers[i] = Math.max(0, Math.min(300, numbers[i]))
     }
-    chart1.updateSeries([
+    chart3.updateSeries([
       {
         name: "jewelry Items",
         data: numbers,
@@ -82,7 +94,18 @@ $(document).ready(function () {
     ])
     // Print the updated array
     console.log(numbers)
-
+    document.getElementById("StorageRoom").innerHTML = `${numbers[0]}`
+    document.getElementById("Repair").innerHTML = `${numbers[2]}`
+    document.getElementById("Display").innerHTML = `${numbers[4]}`
+    document.getElementById("Exits").innerHTML = `${numbers[6]}`
+    const percentage1 = Math.round((numbers[0] / 300) * 100)
+    const percentage2 = Math.round((numbers[2] / 100) * 100)
+    const percentage3 = Math.round((numbers[4] / 300) * 100)
+    const percentage4 = Math.round((numbers[6] / 100) * 100)
+    progressBar1.style.width = `${percentage1}%`
+    progressBar2.style.width = `${percentage2}%`
+    progressBar3.style.width = `${percentage3}%`
+    progressBar4.style.width = `${percentage4}%`
     // Call the function again after the specified interval
     setTimeout(changeValues, interval)
   }
@@ -91,7 +114,7 @@ $(document).ready(function () {
   // let val = changeValues()
   // console.log("val: ", val)
 
-  var options1 = {
+  var options3 = {
     // Original array
 
     // Start the process
@@ -99,7 +122,7 @@ $(document).ready(function () {
     series: [
       {
         name: "jewelry Items",
-        data: [200, 75, 20, 50, 240, 20, 45],
+        data: [200, 75, 20, 50, 240, 20, 45, 0],
       },
       // {
       //   name: "Low - 2013",
@@ -151,6 +174,7 @@ $(document).ready(function () {
         "Display Cases",
         "Sales Counter",
         "Exits",
+        "Out of track",
       ],
       title: {
         text: "Location",
@@ -172,8 +196,8 @@ $(document).ready(function () {
     },
   }
 
-  var chart1 = new ApexCharts(document.querySelector("#apex1"), options1)
-  chart1.render()
+  var chart3 = new ApexCharts(document.querySelector("#apex3"), options3)
+  chart3.render()
   changeValues()
 
   var options2 = {
